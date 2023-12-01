@@ -1,0 +1,3 @@
+home_controller:
+  resource: App\Home\HomeController
+  type: attribute

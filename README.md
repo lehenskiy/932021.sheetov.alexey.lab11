@@ -2,7 +2,7 @@
 Лабораторная работа #11 в рамках курса "Web-технологии"
 
 # Requirements
-- PHP
+- PHP 8.2
 - Composer
 
 # Deployment

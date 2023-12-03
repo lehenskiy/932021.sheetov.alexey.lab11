@@ -20,6 +20,7 @@ class CalcController extends AbstractController
 
         return $this->render('@src_dir/Calc/output.twig', [
             'calcDTO' => $calcDTO,
+            'mode' => $mode->value
         ]);
     }
 }

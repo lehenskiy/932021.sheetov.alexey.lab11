@@ -11,7 +11,7 @@ class CalcDTO
     public int $addResult;
     public int $subResult;
     public int $multResult;
-    public int $divResult;
+    public ?int $divResult;
 
     public function __construct(array $calcData)
     {

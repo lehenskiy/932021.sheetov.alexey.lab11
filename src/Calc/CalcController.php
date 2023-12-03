@@ -13,8 +13,8 @@ class CalcController extends AbstractController
     #[Route(path: '/calc/{mode}', name: 'show_calc')]
     public function index(CalcEnum $mode, CalcService $calcService): Response
     {
-        $firstValue = random_int(1, 100);
-        $secondValue = random_int(1, 100);
+        $firstValue = random_int(0, 10);
+        $secondValue = random_int(0, 10);
 
         $calcDTO = $calcService->getCalcDTO($firstValue, $secondValue);
 

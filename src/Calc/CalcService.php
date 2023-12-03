@@ -35,8 +35,12 @@ class CalcService
         return $firstValue * $secondValue;
     }
 
-    public function div(int $firstValue, int $secondValue): int
+    public function div(int $firstValue, int $secondValue): ?int
     {
-        return (int)($firstValue / $secondValue);
+        try {
+            return (int)($firstValue / $secondValue);
+        } catch (\DivisionByZeroError $error) {
+            return null;
+        }
     }
 }

@@ -47,7 +47,11 @@
     <div>
         <h2 style="font-family: Arial, sans-serif; font-weight: 700; font-size: 2.0vh;">Div:</h2>
         <div style="font-family: Arial, sans-serif; font-weight: 400; font-size: 2.0vh;">
-            {{ calcDTO.firstValue }} / {{ calcDTO.secondValue }} = {{ calcDTO.divResult }}
+            {% if calcDTO.divResult is null %}
+                Division by zero
+            {% else %}
+                {{ calcDTO.firstValue }} / {{ calcDTO.secondValue }} = {{ calcDTO.divResult }}
+            {% endif %}
         </div>
     </div>
 </div>
